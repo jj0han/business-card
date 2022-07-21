@@ -1,38 +1,154 @@
 .App {
+  background-color: #1A1B21;
+  border-radius: 10px 10px 10px 10px;
+  width: 260px;
+  margin: auto;
+  animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+}
+
+.Info__container {
+  background-color: #1A1B21;
+  margin-bottom: 10px;
+}
+
+.Info__img {
+  width: 100%;
+  height: 230px;
+  border: 0.8px solid white;
+  background-image: url("../src/assets/perfil.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Info__container, .Info__img {
+  border-radius: 10px 10px 0 0;
+}
+
+.Info__title {
+  font-weight: 700;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+  color: var(--title);
+}
+
+.Info__sub-title {
+  font-size: 12.8px;
+  line-height: 15px;
+  text-align: center;
+  margin-top: 3px;
+  color: var(--frontend);
+}
+
+.Info__site {
+  display: block;
+  text-align: center;
+  font-size: 10.24px;
+  color: var(--site);
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.Info__site:hover {
+  text-decoration: underline;
+}
+
+.Info__list {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.Info__item {
+  border-radius: 6px;
+  list-style-type: none;
+  width: 35%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Info__item:nth-child(1) {
+  background-color: var(--title);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Info__item:nth-child(1) > a {
+  color: #374151;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Info__item:nth-child(2) {
+  background-color: #5093E2;
+}
+
+.Info__item:nth-child(2) > a {
+  color: var(--title);
+}
+
+.Info__logo {
+  width: 14px;
+  margin-right: 5px;
+}
+
+.Info__link {
+  font-size: 12px;
+  text-decoration: none;
+  padding: 5px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Info__item:hover {
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.683);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Footer__list {
+  background-color: #161619;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  margin-top: 25px;
+}
+
+.Footer__item {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+}
+
+.Footer__link {
+  display: block;
+}
+
+.Footer__img {
+  width: 25px;
+  height: 25px;
+}
+
+.sub-title {
+  color: var(--sub-title);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-top: 10px;
+}
+
+.simple-txt {
+  color: var(--simple-txt);
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.sub-title, .simple-txt {
+  padding: 0 25px;
 }
